@@ -66,7 +66,7 @@ int main() {
 
 ---
 
-### 🧪 Ejemplo de obtencion de content-type
+### 🧪 Ejemplo de obtención de content-type
 
 ```C
 #include <stdio.h>
@@ -135,17 +135,17 @@ int main() {
 ## 📚 Documentación de la API
 
 #### Manejo de file binario
-- `char* RBFile(char* inputPath)`: Retorna el Base64 del archivo leido.
+- `char* RBFile(char* inputPath)`: Retorna el Base64 del archivo leído.
 - `int WBFile(char* b64Str, char* outputPath)`: Retorna 0 cuando el archivo se crea correctamente.
 - `char* GetContentTypeFile(char* b64Str)`: Retorna el content-type de un base64.
 
 #### Manejo de file de texto
-- `char* RTFile(char* inputPath)`: Retorna el texto del archivo leido.
+- `char* RTFile(char* inputPath)`: Retorna el texto del archivo leído.
 - `int WTFile(char* textStr, char* outputPath)`: Retorna 0 cuando el archivo se crea correctamente.
 
 #### Manejo de dir
 - `int CreateDir(char* path)`: Retorna 0 cuando el directorio se crea correctamente.
-- `int PathExists(char* path)`: Retorna 1 cuando el dir/file existe.
+- `int PathExists(char* path)`: Retorna 1 cuando el directorio o archivo existe.
 - `char** ListFiles(char* dirPath)`: Retorna la lista de archivos en la ruta.
 
 #### Utilidades
