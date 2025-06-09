@@ -74,23 +74,20 @@ int main() {
 #include "file.h"
 
 int main() {
-    // Ejemplo de creación de directorio
-    char* dirPath = "./nueva_carpeta/subcarpeta";
-
-    if (CreateDir(dirPath) == 0) {
-        printf("Directorio creado exitosamente: %s\n", dirPath);
-
-        // Ahora podemos usar las otras funciones con este directorio
-        char* filePath = "./nueva_carpeta/subcarpeta/archivo.txt";
-        char* textData = "Este archivo fue creado en un nuevo directorio";
-
-        if (WTFile(textData, filePath) == 0) {
-            printf("Archivo creado en el nuevo directorio\n");
-        }
-    } else {
-        printf("Error al crear directorio\n");
-    }
-
+    // Ejemplo con GetContentTypeFromBase64
+    char* imageBase64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg=="; // PNG 1x1
+    char* contentType = GetContentTypeFromBase64(imageBase64);
+    
+    printf("Content-Type: %s\n", contentType);
+    FreeCString(contentType);
+    
+    // Ejemplo con JSON
+    char* jsonBase64 = "ewogICJuYW1lIjogIkpvaG4gRG9lIiwKICAiYWdlIjogMzAKfQ=="; // {"name": "John Doe", "age": 30}
+    contentType = GetContentTypeFromBase64(jsonBase64);
+    
+    printf("Content-Type: %s\n", contentType);
+    FreeCString(contentType);
+    
     return 0;
 }
 ```
