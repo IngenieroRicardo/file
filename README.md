@@ -76,17 +76,17 @@ int main() {
 int main() {
     // Ejemplo con GetContentTypeFromBase64
     char* imageBase64 = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg=="; // PNG 1x1
-    char* contentType = GetContentTypeFromBase64(imageBase64);
+    char* contentType = GetContentTypeFile(imageBase64);
     
     printf("Content-Type: %s\n", contentType);
-    FreeCString(contentType);
+    free(contentType);
     
     // Ejemplo con JSON
     char* jsonBase64 = "ewogICJuYW1lIjogIkpvaG4gRG9lIiwKICAiYWdlIjogMzAKfQ=="; // {"name": "John Doe", "age": 30}
-    contentType = GetContentTypeFromBase64(jsonBase64);
+    contentType = GetContentTypeFile(jsonBase64);
     
     printf("Content-Type: %s\n", contentType);
-    FreeCString(contentType);
+    free(contentType);
     
     return 0;
 }
