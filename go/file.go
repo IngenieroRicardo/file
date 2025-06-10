@@ -1,16 +1,11 @@
 package file
 
-/*
-#include <stdlib.h>
-*/
-import "C"
 import (
 	"encoding/base64"
 	"io/ioutil"
 	"net/http"
 	"strings"
 	"os"
-	"unsafe"
 )
 
 func WBFile(b64Str, outputPath string) error {
