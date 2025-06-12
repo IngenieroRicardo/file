@@ -8,8 +8,8 @@ Compilada usando: `go build -o file.dll -buildmode=c-shared file.go`
 
 | Linux | Windows |
 | --- | --- |
-| `wget https://github.com/IngenieroRicardo/file/releases/download/1.0/file.so` | `Invoke-WebRequest https://github.com/IngenieroRicardo/file/releases/download/1.0/file.dll -OutFile ./file.dll` |
-| `wget https://github.com/IngenieroRicardo/file/releases/download/1.0/file.h` | `Invoke-WebRequest https://github.com/IngenieroRicardo/file/releases/download/1.0/file.h -OutFile ./file.h` |
+| `wget https://github.com/IngenieroRicardo/file/releases/download/2.0/file.so` | `Invoke-WebRequest https://github.com/IngenieroRicardo/file/releases/download/2.0/file.dll -OutFile ./file.dll` |
+| `wget https://github.com/IngenieroRicardo/file/releases/download/2.0/file.h` | `Invoke-WebRequest https://github.com/IngenieroRicardo/file/releases/download/2.0/file.h -OutFile ./file.h` |
 
 ---
 
