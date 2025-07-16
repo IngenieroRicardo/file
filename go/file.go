@@ -8,6 +8,14 @@ import (
 	"os"
 )
 
+func IsDirectory(path string) (bool, error) {
+    fileInfo, err := os.Stat(path)
+    if err != nil {
+        return false, err
+    }
+    return fileInfo.IsDir(), nil
+}
+
 func WBFile(b64Str, outputPath string) error {
 	data, err := base64.StdEncoding.DecodeString(b64Str)
 	if err != nil {
