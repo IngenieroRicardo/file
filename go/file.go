@@ -1,3 +1,7 @@
+// file file.go
+
+// +build !js
+
 package file
 
 import (
