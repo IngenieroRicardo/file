@@ -13,6 +13,19 @@ import (
 	"unsafe"
 )
 
+//export IsDirectory
+func IsDirectory(path *C.char) C.int {
+	goPath := C.GoString(path)
+	fileInfo, err := os.Stat(goPath)
+	if err != nil {
+		return -1 // Error al acceder
+	}
+	if fileInfo.IsDir() {
+		return 1 // Es directorio
+	}
+	return 0 // Es archivo
+}
+
 //export WBFile
 func WBFile(b64Str *C.char, outputPath *C.char) C.int {
 	goB64Str := C.GoString(b64Str)
