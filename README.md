@@ -181,5 +181,3 @@ int main() {
 - Los códigos de error negativos se reservan para indicar fallos específicos.
 
 
-
-Este README ahora cubre todas las funciones exportadas, incluye ejemplos actualizados y documentación clara. Además, he corregido algunos detalles como la inclusión de `IsDirectory` y los códigos de retorno específicos de `WBFile`.
